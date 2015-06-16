@@ -4,12 +4,10 @@
 
 
 # makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.
-	
 # 1. set the value of the matrix
 # 2. get the value of the matrix
 # 3. set the value of the matrix
 # 4. get the value of the matrix
-
 
 # define makeCacheMatrix function and input pararmeter as matrix()
 
@@ -22,11 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 # create the matrix    
     
 	set <- function(y) {
-        
 		x <<- y
-        
 		cache<<- NULL
-    
 	}
     
 
@@ -66,17 +61,13 @@ cacheSolve <- function(x, ...) {
 # if cached inverse already exist,  return it   
     
 	if(!is.null(cache)) {
-        
 	message("Cache data existed.")
-        
 	return(cache)
-    
 	}
   
 # if cached inverse doesn't exist, create and store it    
     
-message("No cache data, create new cache data")		
-    
+	message("No cache data, create new cache data")		
 	data<-x$get()
  
 
